@@ -1,8 +1,6 @@
 package database
 
 import (
-	"github.com/bumblebee47293/to_do_app/models"
-
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
@@ -15,5 +13,4 @@ func InitDatabase() {
 	if err != nil {
 		panic("failed to connect database")
 	}
-	DB.AutoMigrate(&models.Todo{})
 }
